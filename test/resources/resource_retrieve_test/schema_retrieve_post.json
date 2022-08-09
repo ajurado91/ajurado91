@@ -1,0 +1,244 @@
+{
+    "id": {
+        "type": "integer"
+    },
+    "date": {
+        "type": "string"
+    },
+    "date_gmt": {
+        "type": "string"
+    },
+    "guid": {
+        "type": "dict",
+        "schema": {
+            "rendered": {
+                "type": "string"
+            }
+        }
+    },
+    "modified": {
+        "type": "string"
+    },
+    "modified_gmt": {
+        "type": "string"
+    },
+    "slug": {
+        "type": "string"
+    },
+    "status": {
+        "type": "string"
+    },
+    "type": {
+        "type": "string"
+    },
+    "link": {
+        "type": "string"
+    },
+    "title": {
+        "type": "dict",
+        "schema": {
+            "rendered": {
+                "type": "string"
+            }
+        }
+    },
+    "content": {
+        "type": "dict",
+        "schema": {
+            "rendered": {
+                "type": "string"
+                },
+            "protected": {
+                "type": "boolean"
+            }
+        }
+    },
+    "excerpt": {
+        "type": "dict",
+        "schema": {
+            "rendered": {
+                "type": "string"
+            },
+            "protected": {
+                "type": "boolean"
+            }
+        }
+    },
+    "author": {
+        "type": "integer"
+    },
+    "featured_media": {
+        "type": "integer"
+    },
+    "comment_status": {
+        "type": "string"
+    },
+    "ping_status": {
+        "type": "string"
+    },
+    "sticky": {
+        "type": "boolean"
+    },
+    "template": {
+        "type": "string"
+    },
+    "format": {
+        "type": "string"
+    },
+    "meta": {
+        "type": ["dict", "list"],
+        "schema": {}
+    },
+    "categories": {
+        "type": ["dict", "list"],
+        "schema":
+            {
+                "type": "integer"
+            }
+
+    },
+    "tags": {
+        "type": ["dict", "list"],
+        "schema": {}
+    },
+
+    "_links": {
+        "type": "dict",
+        "schema": {
+            "self": {
+                "type": ["dict", "list"],
+                "schema":{
+                    "type": "dict",
+                    "schema": {
+                        "href": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "collection": {
+                "type": ["dict", "list"],
+                "schema":{
+                    "type": "dict",
+                    "schema": {
+                        "href": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "about": {
+                "type": ["dict", "list"],
+                "schema":{
+                    "type": "dict",
+                    "schema": {
+                        "href": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "author": {
+                "type": ["dict", "list"],
+                "schema": {
+                    "type": "dict",
+                    "schema": {
+                        "embeddable": {
+                            "type": "boolean"
+                        },
+                        "href": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "replies": {
+                "type": ["dict", "list"],
+                "schema":{
+                    "type": "dict",
+                    "schema": {
+                        "embeddable": {
+                            "type": "boolean"
+                        },
+                        "href": {
+                            "type": "string"
+                        }
+                    }
+                    }
+            },
+            "version-history": {
+                "type": ["dict", "list"],
+                "schema": {
+                    "type": "dict",
+                    "schema": {
+                        "count": {
+                            "type": "integer"
+                        },
+                        "href": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "predecessor-version": {
+                "type": ["dict", "list"],
+                "schema": {
+                    "type": "dict",
+                    "schema": {
+                        "id": {
+                            "type": "integer"
+                        },
+                        "href": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "wp:attachment": {
+                "type": ["dict", "list"],
+                "schema": {
+                    "type": "dict",
+                    "schema": {
+                        "href": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "wp:term": {
+                "type": ["dict", "list"],
+                "schema": {
+                    "type": "dict",
+                    "schema": {
+                        "taxonomy": {
+                            "type": "string"
+                        },
+                        "embeddable": {
+                            "type": "boolean"
+                        },
+                        "href": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "curies": {
+                "type": "list",
+                "schema": {
+                    "type": "dict",
+                    "schema": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "href": {
+                            "type": "string"
+                        },
+                        "templated": {
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

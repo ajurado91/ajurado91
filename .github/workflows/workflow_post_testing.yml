@@ -1,0 +1,33 @@
+name: Build AT16-COMPUMUNDOHIPERMEGARED
+
+on: [push]
+env:
+  URI_TOKEN: ${{ secrets.URI_TOKEN }}
+  USER_NAME: ${{ secrets.USER_NAME }}
+  PASSWORD: ${{ secrets.PASSWORD }}
+  URL: ${{ secrets.URL }}
+
+jobs:
+  build:
+    runs-on: aquena-runner
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Build App
+      run: pip3 install -r requirements.txt
+
+    - name: Create .env file
+      run: |
+        touch .env
+        echo URI_TOKEN=$URI_TOKEN >> .env
+        echo USER_NAME=$USER_NAME >> .env
+        echo PASSWORD=$PASSWORD >> .env
+        echo URL=$URL >> .env
+
+    - name: Execute Test
+      run: |
+        echo "$PWD"
+        cd test
+        python3 -m pytest
